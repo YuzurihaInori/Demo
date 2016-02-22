@@ -71,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
 //        mViewPager.addView(page1);
 //        mViewPager.addView(page2);
 //        mViewPager.addView(page3);
+
+        
         mViewPager.setPageTransformer(true,new DepthPageTransformer());
         mViewPager.setAdapter(new PagerAdapter() {
             @Override
