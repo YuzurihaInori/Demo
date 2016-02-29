@@ -18,7 +18,7 @@ public class Main4Activity extends AppCompatActivity {
 
         imgPic1 = (ImageView)findViewById(R.id.img_pic1);
 
-        Picasso.with(this).load(R.drawable.inage1).resize(300,300).into(imgPic1);
-//        Glide.with(this).load(R.drawable.inage1).centerCrop().into(imgPic1);
+//        Picasso.with(this).load(R.drawable.inage1).resize(30,30).into(imgPic1);
+        Glide.with(this).load(R.drawable.inage1).centerCrop().into(imgPic1);
     }
 }
