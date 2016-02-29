@@ -1,7 +1,9 @@
 package com.kding.demo;
 
 import android.annotation.TargetApi;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.app.AppCompatActivity;
@@ -13,8 +15,10 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.nineoldandroids.view.ViewHelper;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
 //            R.drawable.guide_image2, R.drawable.guide_image3};
     private List<View> views = new ArrayList<View>();
 
+    public boolean isShow;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,15 +49,34 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView block = (TextView) findViewById(R.id.block);
 
+
+//        final PackageManager packageManager = getPackageManager();
+//
+//        findViewById(R.id.show).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                packageManager.setApplicationEnabledSetting("com.cmt.yi.yimama", PackageManager.COMPONENT_ENABLED_STATE_DEFAULT,PackageManager.DONT_KILL_APP);
+//            }
+//        });
+//        findViewById(R.id.hide).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                packageManager.setApplicationEnabledSetting("com.cmt.yi.yimama", PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+//            }
+//        });
         block.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Main2Activity.class);
-                intent.putExtra("x", ViewHelper.getX(block));
-                intent.putExtra("y", ViewHelper.getY(block));
-                intent.putExtra("w", block.getWidth());
-                intent.putExtra("h", block.getHeight());
-                startActivity(intent);
+
+                startActivity(new Intent(MainActivity.this,Main4Activity.class));
+//                startActivity(new Intent(MainActivity.this,Main3Activity.class));
+//                Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+//                intent.putExtra("x", ViewHelper.getX(block));
+//                intent.putExtra("y", ViewHelper.getY(block));
+//                intent.putExtra("w", block.getWidth());
+//                intent.putExtra("h", block.getHeight());
+//                startActivity(intent);
             }
         });
 

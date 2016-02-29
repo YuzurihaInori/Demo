@@ -12,6 +12,18 @@
         android:layout_height="50dp"
         android:background="#ff99ff"/>
 
+    <Button
+        android:id="@+id/show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show"/>
+
+    <Button
+        android:id="@+id/hide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hide"/>
+
     <com.kding.demo.CuteProgress
         android:id="@+id/cute"
         android:layout_margin="10dp"
